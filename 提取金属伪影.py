@@ -62,4 +62,3 @@ writer.Write()
 renWin.Render()
 iren.Initialize()
 iren.Start()
-
