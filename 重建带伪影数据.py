@@ -11,10 +11,6 @@ iren.SetRenderWindow(renWin)
 reader = vtk.vtkDICOMImageReader()
 reader.SetDataByteOrderToLittleEndian()
 reader.SetDirectoryName('C:/Users/Administrator/Desktop/weiying')
-# C:/Users/Administrator/Desktop/weiying
-# D:/VTK/DICOM/S67950/S4010/dcm
-# D:/VTK/bones1
-# D:/3dslicer/Slicer 4.11.20210226/fusion/ljj
 #reader.SetDataSpacing(3.2, 3.2, 1.5)
 reader.SetDataSpacing(0.47851601243, 0.47851601243, 47851601243)
 # (0028,0030)	Pixel Spacing	0.47851601243\0.47851601243
@@ -23,12 +19,6 @@ reader.SetDataSpacing(0.47851601243, 0.47851601243, 47851601243)
 extractor = vtk.vtkContourFilter()
 extractor.SetInputConnection(reader.GetOutputPort())
 extractor.SetValue(0, -250)
-
-
-# writer = vtk.vtkPolyDataWriter()
-# writer.SetInputConnection(extractor.GetOutputPort())
-# writer.SetFileName('jiati.vkt')
-# writer.Write()
 
 skinNormals = vtk.vtkPolyDataNormals()
 skinNormals.SetInputConnection(extractor.GetOutputPort())
@@ -75,4 +65,3 @@ writer.Write()
 renWin.Render()
 iren.Initialize()
 iren.Start()
-
