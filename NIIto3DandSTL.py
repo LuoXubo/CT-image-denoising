@@ -1,14 +1,16 @@
+"""
+@Description :   
+@Author      :   Xubo Luo 
+@Time        :   2023/03/13 17:04:45
+"""
 from vtkmodules.util.vtkImageImportFromArray import *
 import vtk
 import SimpleITK as sitk
 import numpy as np
 import time
 
-# path = '../vtk/nii_data_low/1_1.nii' #segmentation volume
-# path = 'D:/VTK/zjs.nii'  # segmentation volume
-# path = 'C:/Users/Administrator/Desktop/weiying.nii'
-# path = 'D:/VTK/prostheticCT/spine-1/spine-1/patient0001/2804506/2804506.nii'
-path = 'C:/Users/Administrator/Desktop/data.nii'
+
+path = './data.nii'
 ds = sitk.ReadImage(path)  # 读取nii数据的第一个函数sitk.ReadImage
 data = sitk.GetArrayFromImage(ds)  # 把itk.image转为array
 

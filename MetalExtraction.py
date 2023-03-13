@@ -1,3 +1,8 @@
+"""
+@Description :   
+@Author      :   Xubo Luo 
+@Time        :   2023/03/13 17:04:45
+"""
 import vtk
 import SimpleITK as sitk
 
@@ -10,7 +15,7 @@ iren.SetRenderWindow(renWin)
 
 reader = vtk.vtkDICOMImageReader()
 reader.SetDataByteOrderToLittleEndian()
-reader.SetDirectoryName('C:/Users/Administrator/Desktop/weiying')
+reader.SetDirectoryName('./weiying')
 #reader.SetDataSpacing(3.2, 3.2, 1.5)
 reader.SetDataSpacing(0.47851601243, 0.47851601243, 47851601243)
 # (0028,0030)	Pixel Spacing	0.47851601243\0.47851601243
@@ -56,7 +61,7 @@ renderer.ResetCameraClippingRange()
 
 writer = vtk.vtkSTLWriter()
 writer.SetInputConnection(extractor.GetOutputPort())
-writer.SetFileName('D:/VTK/vtkpython/jiati.stl'.encode('GBK'))
+writer.SetFileName('./jiati.stl'.encode('GBK'))
 writer.Write()
 
 renWin.Render()

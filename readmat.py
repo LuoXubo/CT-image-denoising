@@ -1,11 +1,16 @@
+"""
+@Description :   
+@Author      :   Xubo Luo 
+@Time        :   2023/03/13 17:04:45
+"""
 import os
 import scipy.io as scio
 import pydicom
 import numpy as np
 
-matpath = 'C:/Users/Administrator/Desktop/radonmethod/'
-dcmpath = 'C:/Users/Administrator/Desktop/weiying/'
-savepath = 'C:/Users/Administrator/Desktop/radon/'
+matpath = './radonmethod/'
+dcmpath = './weiying/'
+savepath = './radon/'
 
 dcmnames = os.listdir(dcmpath)
 matnames = os.listdir(matpath)

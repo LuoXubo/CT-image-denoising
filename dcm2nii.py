@@ -1,7 +1,12 @@
+"""
+@Description :   
+@Author      :   Xubo Luo 
+@Time        :   2023/03/13 17:04:45
+"""
 import SimpleITK as sitk
 
-dcmpath = 'C:/Users/Administrator/Desktop/weiying'
-savepath = 'C:/Users/Administrator/Desktop/'
+dcmpath = './weiying'
+savepath = './Desktop/'
 
 reader = sitk.ImageSeriesReader()
 dicom_names = reader.GetGDCMSeriesFileNames(dcmpath)

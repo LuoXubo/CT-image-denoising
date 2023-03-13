@@ -1,3 +1,8 @@
+"""
+@Description :   
+@Author      :   Xubo Luo 
+@Time        :   2023/03/13 17:04:45
+"""
 import pydicom
 import numpy as np
 import os
@@ -94,4 +99,4 @@ data16 = np.int16(resImg)
 # plt.imshow(resImg, 'gray')
 # plt.show()
 dcm.PixelData = data16.tobytes()
-dcm.save_as('C:/Users/Administrator/Desktop/test.dcm')
+dcm.save_as('./test.dcm')

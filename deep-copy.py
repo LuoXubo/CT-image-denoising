@@ -1,13 +1,18 @@
+"""
+@Description :   
+@Author      :   Xubo Luo 
+@Time        :   2023/03/13 17:04:45
+"""
 import os
 
 import numpy as np
 import pydicom
 from matplotlib import pyplot as plt
 
-ppath = 'C:/Users/Administrator/Desktop/processedData/'
-wpath = 'C:/Users/Administrator/Desktop/weiying/'
+ppath = './processedData/'
+wpath = './weiying/'
 
-savepath = 'C:/Users/Administrator/Desktop/copypixel/'
+savepath = './copypixel/'
 
 pnames = os.listdir(ppath)
 wnames = os.listdir(wpath)
